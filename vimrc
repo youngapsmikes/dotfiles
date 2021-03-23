@@ -1,7 +1,5 @@
 "Comments in Vimscript start
 
-
-
 " Comments in Vimscript start with a `"`.
 
 " If you open this file in Vim, it'll be syntax highlighted for you.
@@ -15,6 +13,7 @@
 " `vim -u foo`).
 set nocompatible
 
+filetype plugin on
 " Turn on syntax highlighting.
 syntax on
 
@@ -79,3 +78,19 @@ nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 " ...and in insert mode
 set guifont=Monaco:h28
+
+" jk shortcut is so invaluable
+inoremap jk <Esc>:w<CR>
+noremap jk <Esc>:w<CR>
+set timeoutlen=300
+
+" vimwiki stuff "
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+
+call plug#begin()
+Plug 'vimwiki/vimwiki'
+call plug#end()
+
+:nmap <space>w <Plug>VimwikiIndex
+
