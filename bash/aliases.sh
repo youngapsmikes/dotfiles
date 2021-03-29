@@ -37,3 +37,6 @@ alias srcall="source /home/myli/.dotfiles/bash/aliases.sh"
 
 ## shortcuts for python 
 alias server="python3 -m http. server 8000"
+
+## shortcut for vimwiki
+alias vwiki="cd ~/vimwiki"

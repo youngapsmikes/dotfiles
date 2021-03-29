@@ -1,5 +1,5 @@
 "Comments in Vimscript start
-
+ 
 " Comments in Vimscript start with a `"`.
 
 " If you open this file in Vim, it'll be syntax highlighted for you.
@@ -66,6 +66,10 @@ set noerrorbells visualbell t_vb=
 " sometimes be convenient.
 set mouse+=a
 
+" I love the space bar 
+:let mapleader = "\<Space>"
+
+
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
 " for movement, rather than using more efficient movement commands, is also a
@@ -93,4 +97,11 @@ Plug 'vimwiki/vimwiki'
 call plug#end()
 
 :nmap <space>w <Plug>VimwikiIndex
+
+
+
+
+" timestamps 
+map <leader>d :put =strftime('# %a %Y-%m-%d %H:%M:%S%z')<CR>
+
 
